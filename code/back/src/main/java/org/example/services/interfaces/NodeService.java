@@ -1,4 +1,4 @@
-package org.example.services.interfaces.interfaces;
+package org.example.services.interfaces;
 
 import org.example.dto.request.NodeRequest;
 import org.example.dto.response.NodeResponse;

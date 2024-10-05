@@ -3,13 +3,14 @@ package org.example.entity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Objects;
 
-@Schema(description = "DB with folders")
 @Data
 @Entity
 @Table(name = "nodes")
+@ToString
 public class Node {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //autogeneration
