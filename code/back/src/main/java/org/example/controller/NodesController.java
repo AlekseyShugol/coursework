@@ -12,7 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/nodes")
-
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class NodesController {
     private final NodeService nodeService;
 

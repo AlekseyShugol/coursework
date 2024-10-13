@@ -1,0 +1,1 @@
+INSERT INTO nodes (name, type, parent_id, url) VALUES ('Главная', 'FOLDER', NULL, NULL);
