@@ -2,11 +2,11 @@ INSERT INTO nodes (name, type, parent_id, url) VALUES ('Root Node', 'FOLDER', NU
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 1', 'FILE', 1, 'http://example.com/file1');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 2', 'FILE', 1, 'http://example.com/file2');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 3', 'FOLDER', 1, NULL);
-INSERT INTO nodes (name, type, parent_id, url) VALUES ('Grandchild Node 1', 'FILE', 4, 'http://example.com/file3');
+INSERT INTO nodes (name, type, parent_id, url) VALUES ('Grandchild Node 1', 'LINK', 4, 'https://www.youtube.com/embed/00-hcWc7_fA?si=SrDapjG61P8oDOBr');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Grandchild Node 2', 'FILE', 4, 'http://example.com/file4');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Root Node 2', 'FOLDER', NULL, NULL);
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 4', 'FOLDER', 7, NULL);
-INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 5', 'FILE', 7, 'http://example.com/file5');
+INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 5', 'LINK', 7, 'https://www.youtube.com/embed/_zaehrkPuuI?si=4tSwrCD7keoDRY6t');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 6', 'FILE', 8, 'http://example.com/file6');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Root Node 3', 'FOLDER', NULL, NULL);
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 7', 'FILE', 10, 'http://example.com/file7');
@@ -20,4 +20,4 @@ INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 11', 'FILE', 
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Child Node 12', 'FOLDER', 16, NULL);
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Grandchild Node 5', 'FILE', 19, 'http://example.com/file13');
 INSERT INTO nodes (name, type, parent_id, url) VALUES ('Grandchild Node 6', 'FILE', 19, 'http://example.com/file14');
-
+INSERT INTO nodes (name, type, parent_id, url) VALUES ('dddd', 'FILE', 4, 'https://youtu.be/gaxQoucrWrk?si=m8KKeBvqyXi2DbB8');
