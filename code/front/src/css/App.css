@@ -1,0 +1,41 @@
+.container {
+    padding: 20px;
+  }
+  
+  .root-buttons {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    padding-bottom: 10px; /* Отступ снизу для удобства */
+  }
+  
+  .root-button {
+    background: none; /* Убираем фон */
+    border: none; /* Убираем рамку */
+    color: #0000ff; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание по умолчанию */
+    cursor: pointer; /* Указатель на курсоре */
+    font-size: 16px; /* Размер шрифта */
+  }
+  
+  .root-button.active {
+    text-decoration: underline; /* Подчеркивание для активной папки */
+  }
+  
+  .root-button:hover {
+    color: #000000; /* Цвет текста при наведении */
+  }
+  
+  .back-button {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+  }
+  
+  li {
+    margin: 5px 0; /* Отступы между элементами списка */
+  }
