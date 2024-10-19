@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './js/App'; // Импортируем класс App
+import App from './jsx/components/App'; // Импортируем класс App
 
 // Получаем корневой элемент из HTML
 const rootElement = document.getElementById('root');
