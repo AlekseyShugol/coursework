@@ -21,11 +21,11 @@ class App extends Component {
       const result = await fetchData(); // Получаем данные при монтировании компонента
       this.setState({ data: result, loading: false });
 
-      const firstRootFolder = result.find(item => item.parentId === null);
-      if (firstRootFolder) {
+      const rootFolders = result.filter(item => item.parentId === null);
+      if (rootFolders.length > 0) {
         this.setState({
-          currentFolder: firstRootFolder.id,
-          path: [firstRootFolder.id],
+          currentFolder: rootFolders[0].id, // Устанавливаем первую корневую папку как текущую
+          path: [rootFolders[0].id],
         });
       }
     } catch (error) {
@@ -56,8 +56,8 @@ class App extends Component {
   handleBackClick = () => {
     this.setState(prevState => {
       const newPath = [...prevState.path];
-      newPath.pop();
-      const parentId = newPath[newPath.length - 1] || null;
+      newPath.pop(); // Убираем текущую папку из пути
+      const parentId = newPath[newPath.length - 1] || null; // Получаем родительский ID
       return {
         path: newPath,
         currentFolder: parentId,
@@ -96,14 +96,17 @@ class App extends Component {
     if (loading) return <div>Загрузка...</div>;
     if (error) return <div>{error}</div>;
 
-    const topLevelNodes = data.filter(item => item.parentId === null);
+    const rootFolders = data.filter(item => item.parentId === null); // Корневые папки
     const currentChildren = data.filter(item => item.parentId === currentFolder);
+
+    // Проверяем, находимся ли мы в корне (если currentFolder является одной из корневых папок)
+    const isAtRoot = rootFolders.some(folder => folder.id === currentFolder);
 
     return (
       <div className="container">
         <h1>Корневые папки:</h1>
         <div className="root-buttons">
-          {topLevelNodes.map(node => (
+          {rootFolders.map(node => (
             <button
               key={node.id}
               className={`root-button ${currentFolder === node.id ? 'active' : ''}`}
@@ -114,13 +117,15 @@ class App extends Component {
           ))}
         </div>
 
-        {path.length > 0 && (
-          <button onClick={this.handleBackClick} className="back-button">
-            Вернуться назад
-          </button>
-        )}
+        <button
+          className="back-button"
+          onClick={this.handleBackClick}
+          disabled={isAtRoot} // Делаем кнопку неактивной, если находимся в корне
+        >
+          Назад
+        </button>
 
-        {currentFolder && (
+        {currentFolder && currentChildren.length > 0 && (
           <ul>
             {this.renderTree(currentChildren)} {/* Здесь рендерятся дочерние узлы */}
           </ul>
