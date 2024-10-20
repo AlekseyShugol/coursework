@@ -22,4 +22,7 @@ public class NodeRequest {
 
     @Schema(description = "url to file or internet video")
     private String url;
+
+    @Schema(description = "file description")
+    private String description;
 }
