@@ -16,5 +16,9 @@ public record NodeResponse(
         Long parentId,
 
         @Schema(description = "url to file or internet video")
-        String url
+        String url,
+
+         @Schema(description = "file description")
+         String description
+
 ){}
