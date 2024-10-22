@@ -19,10 +19,6 @@ public record NodeResponse(
         String url,
 
          @Schema(description = "file description")
-         String description,
-
-         @Schema(description = "position")
-         Long position
-
+         String description
 
 ){}
