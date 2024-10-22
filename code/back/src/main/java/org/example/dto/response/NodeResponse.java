@@ -18,11 +18,10 @@ public record NodeResponse(
         @Schema(description = "url to file or internet video")
         String url,
 
-         @Schema(description = "file description")
-         String description,
-
-         @Schema(description = "position")
-         Long position
-
+        @Schema(description = "file description")
+        String description,
+  
+        @Schema(description = "position of elements")
+        Long element_position
 
 ){}

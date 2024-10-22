@@ -25,8 +25,6 @@ public class NodeRequest {
 
     @Schema(description = "file description")
     private String description;
-
-
-    @Schema(description = "element position")
-    private Long position;
+    @Schema(description = "position of elements")
+    private Long element_position;
 }
