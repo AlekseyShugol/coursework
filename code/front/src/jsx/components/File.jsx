@@ -1,51 +1,68 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../../css/File.css'; // Импортируем CSS файл для стилизации
 
-const File = ({ node, onDelete }) => {
-  // Логируем URL при каждом рендере
-  console.log('Current URL:', node.url);
+class File extends Component {
+  constructor(props) {
+    super(props);
+    console.log('Current URL:', this.props.node?.url);
+  }
 
-  const isImage = (url) => {
-    // Проверяем, является ли URL файлом
-    return /\.(jpg|jpeg|png|)$/.test(url);
-  };
-  
-  const isFile = (url) => {
+  isFile(url) {
     return /\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|gif)$/.test(url);
-  };
+  }
 
-  const isYouTubeLink = (url) => {
+  isYouTubeLink(url) {
     return /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/.test(url);
-  };
+  }
 
-  return (
-    <li>
-      {isYouTubeLink(node.url) ? (
-        node.url.includes('embed/') ? (
-          <iframe
-            width="420"
-            height="315"
-            src={node.url}
-            title={node.name}
-            frameBorder="0"
-            allowFullScreen
-          />
+  render() {
+    const { node, onDelete } = this.props;
+
+    // Проверяем, существует ли node и его свойства
+    if (!node || !node.url) {
+      return null; // Если node или его url не существует, ничего не отображаем
+    }
+
+    return (
+      <li className="file-item">
+        {this.isYouTubeLink(node.url) ? (
+          node.url.includes('embed/') ? (
+            <div className="video-container">
+              <p className={`description ${node.description?.length > 50 ? 'left' : 'center'}`}>
+                {node.description}
+              </p>
+              <iframe
+                src={node.url}
+                title={node.name}
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            <a href={node.url} target="_blank" rel="noopener noreferrer">
+              {node.name} (YouTube)
+            </a>
+          )
+        ) : this.isFile(node.url) ? (
+          <div className="file-container">
+            <a href={node.url} target="_blank" rel="noopener noreferrer">
+              {node.name} (Файл)
+            </a>
+            <p className={`description ${node.description?.length > 50 ? 'left' : 'center'}`}>
+              {node.description}
+            </p>
+          </div>
         ) : (
-          <a href={node.url} target="_blank" rel="noopener noreferrer">
-            {node.name} (YouTube)
-          </a>
-        )
-      ) : isFile(node.url) ? (
-        <a href={node.url} target="_blank" rel="noopener noreferrer">
-          {node.name} (Файл)
-        </a>
-      ) : (
-        <img src={node.url} alt={node.name} style={{ width: '200px', height: 'auto' }} />
-      )}
-      <button onClick={onDelete} style={{ marginLeft: '10px', color: 'red' }}>
-        Удалить
-      </button>
-    </li>
-  );
-};
+          <div className="image-container">
+            <img src={node.url} alt={node.name} />
+          </div>
+        )}
+        {/* <button onClick={onDelete} className="delete-button">
+          Удалить
+        </button> */}
+      </li>
+    );
+  }
+}
 
 export default File;
