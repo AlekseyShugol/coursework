@@ -4,5 +4,6 @@ create table nodes(
     type varchar(128),
     parent_id bigint,
     url text,
-    description text
+    description text,
+    element_position bigint
 );

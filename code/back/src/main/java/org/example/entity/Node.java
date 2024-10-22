@@ -27,6 +27,8 @@ public class Node {
 
     private String description;
 
+    private Long element_position;
+
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
