@@ -1,3 +1,3 @@
-INSERT INTO nodes (name, type, parent_id, url, description) VALUES ('Главная', 'FOLDER', NULL, NULL, 'desc1');
-INSERT INTO nodes (name, type, parent_id, url, description) VALUES ('файл1', 'FILE',1, 'http://example.com/file14', 'desc2');
-INSERT INTO nodes (name, type, parent_id, url, description) VALUES ('ПОДГОТОВКА К ЦТ/ЦЭ', 'FOLDER',NULL, NULL, 'desc3');
+INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Главная', 'FOLDER', NULL, NULL, 'desc1',1);
+INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('файл1', 'FILE',1, 'http://example.com/file14', 'desc2',2);
+INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('ПОДГОТОВКА К ЦТ/ЦЭ', 'FOLDER',NULL, NULL, 'desc3',1);
