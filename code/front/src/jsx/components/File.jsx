@@ -4,7 +4,7 @@ import '../../css/File.css'; // Импортируем CSS файл для ст�
 class File extends Component {
   constructor(props) {
     super(props);
-    console.log('Current URL:', this.props.node.url);
+    console.log('Current URL:', this.props.node?.url);
   }
 
   isFile(url) {
@@ -18,12 +18,17 @@ class File extends Component {
   render() {
     const { node, onDelete } = this.props;
 
+    // Проверяем, существует ли node и его свойства
+    if (!node || !node.url) {
+      return null; // Если node или его url не существует, ничего не отображаем
+    }
+
     return (
       <li className="file-item">
         {this.isYouTubeLink(node.url) ? (
           node.url.includes('embed/') ? (
             <div className="video-container">
-              <p className={`description ${node.description.length > 50 ? 'left' : 'center'}`}>
+              <p className={`description ${node.description?.length > 50 ? 'left' : 'center'}`}>
                 {node.description}
               </p>
               <iframe
@@ -43,7 +48,7 @@ class File extends Component {
             <a href={node.url} target="_blank" rel="noopener noreferrer">
               {node.name} (Файл)
             </a>
-            <p className={`description ${node.description.length > 50 ? 'left' : 'center'}`}>
+            <p className={`description ${node.description?.length > 50 ? 'left' : 'center'}`}>
               {node.description}
             </p>
           </div>

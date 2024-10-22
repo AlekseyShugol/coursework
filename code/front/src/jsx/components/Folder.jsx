@@ -16,12 +16,12 @@ class Folder extends Component{
           >
             {node.name}
           </button>
-          <button
+          {/* <button
             onClick={onDelete}
             style={{ marginLeft: '10px', color: 'red' }}
           >
             Удалить
-          </button>
+          </button> */}
         </div>
       </li>
     )

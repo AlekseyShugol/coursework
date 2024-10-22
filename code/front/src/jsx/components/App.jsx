@@ -4,6 +4,8 @@ import Folder from './Folder'; // Импортируем компонент Fold
 import File from './File'; // Импортируем компонент File
 import '../../css/App.css'; // Импортируем стили
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
