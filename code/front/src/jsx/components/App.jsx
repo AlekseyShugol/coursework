@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchData, deleteNode } from '../api/Api'; // Импортируем функции из файла api
+import { fetchData, deleteNode } from '../../js/api/Api'; // Импортируем функции из файла api
 import Folder from './Folder'; // Импортируем компонент Folder
 import File from './File'; // Импортируем компонент File
 import '../../css/App.css'; // Импортируем стили

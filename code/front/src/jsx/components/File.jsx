@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import '../../css/File.css'; // Импортируем CSS файл для стилизации
+import { isFile , isYouTubeLink} from '../../js/functions/checker'
 
 class File extends Component {
   constructor(props) {
     super(props);
-    console.log('Current URL:', this.props.node?.url);
+      console.log(`MAINFRAME CLASS:\n\
+            ID: ${this.props.node?.id}
+            NAME: ${this.props.node?.name}\n
+            TYPE: ${this.props.node?.type}\n
+            PID: ${this.props.node?.parrent_id}\n
+            URL: ${this.props.node?.url}\n,
+            DESCRIPTION: ${this.props.node?.description}\n
+            POSITION: ${this.props.node?.element_position}
+            `
+        )
   }
 
-  isFile(url) {
-    return /\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|gif)$/.test(url);
-  }
 
-  isYouTubeLink(url) {
-    return /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/.test(url);
-  }
 
   render() {
     const { node, onDelete } = this.props;
@@ -25,7 +29,7 @@ class File extends Component {
 
     return (
       <li className="file-item">
-        {this.isYouTubeLink(node.url) ? (
+        {isYouTubeLink(node.url) ? (
           node.url.includes('embed/') ? (
             <div className="video-container">
               <p className={`description ${node.description?.length > 50 ? 'left' : 'center'}`}>
@@ -43,7 +47,7 @@ class File extends Component {
               {node.name} (YouTube)
             </a>
           )
-        ) : this.isFile(node.url) ? (
+        ) : isFile(node.url) ? (
           <div className="file-container">
             <a href={node.url} target="_blank" rel="noopener noreferrer">
               {node.name} (Файл)
