@@ -1,23 +1,22 @@
+// File.jsx
 import React, { Component } from 'react';
 import '../../css/File.css'; // Импортируем CSS файл для стилизации
-import { isFile , isYouTubeLink} from '../../js/functions/checker'
+import { isFile, isYouTubeLink } from '../../js/functions/checker';
 
 class File extends Component {
   constructor(props) {
     super(props);
-      console.log(`MAINFRAME CLASS:\n\
+    console.log(`FILE CLASS:\n\
             ID: ${this.props.node?.id}
             NAME: ${this.props.node?.name}\n
             TYPE: ${this.props.node?.type}\n
-            PID: ${this.props.node?.parrent_id}\n
+            PID: ${this.props.node?.parent_id}\n
             URL: ${this.props.node?.url}\n,
             DESCRIPTION: ${this.props.node?.description}\n
             POSITION: ${this.props.node?.element_position}
             `
-        )
+    );
   }
-
-
 
   render() {
     const { node, onDelete } = this.props;
@@ -58,7 +57,7 @@ class File extends Component {
           </div>
         ) : (
           <div className="image-container">
-            <img src={node.url} alt={node.name} />
+            <img src={node.url} alt={node.name} style={{ pointerEvents: 'none' }} /> {/* Картинка некликабельная */}
           </div>
         )}
         {/* <button onClick={onDelete} className="delete-button">

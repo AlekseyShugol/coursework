@@ -9,8 +9,8 @@ class MainFrame extends Component{
             PID: ${node?.parrent_id}\n
             URL: ${node?.url}\n,
             DESCRIPTION: ${node?.description}\n
-            POSITION: ${node?.element_position}
-            `
+            POSITION: ${node?.element_position}  `
         )
     }
+    
 }
