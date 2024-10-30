@@ -1,0 +1,18 @@
+.side-tree {
+    width: 250px;
+    /* Ширина боковой панели */
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    /* Прокрутка при необходимости */
+}
+
+.content {
+    display: flex;
+}
+
+.current-folder-content {
+    flex: 1;
+    /* Занимает оставшееся пространство */
+    padding: 10px;
+}
