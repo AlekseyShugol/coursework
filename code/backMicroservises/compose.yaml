@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres_nodes:
+    container_name: postgres_nodes
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5436:5432"
+    volumes:
+      - db-data-nodes:/var/lib/postgresql/data
+      - ./database/init_folders.sql:/docker-entrypoint-initdb.d/2-create_tables.sql
+
+volumes:
+  db-data-nodes:
