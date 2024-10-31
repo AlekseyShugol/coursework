@@ -35,7 +35,7 @@ const SideTree = ({ data, currentFolder, onFolderClick, onDelete }) => {
 
     return (
         <div className="side-tree">
-            <h2>Дерево папок</h2>
+        
             <ul>
                 {renderTree(rootFolders)}
             </ul>
