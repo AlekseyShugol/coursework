@@ -127,7 +127,10 @@ class App extends Component {
     const { data, loading, error, currentFolder, path, isSidebarOpen } = this.state;
 
     if (loading) return <div>Загрузка...</div>;
-    if (error) return <div>{error}</div>;
+    if (error){
+      console.log(error);
+       return <div>Извините, произошла ошибка</div>
+    };
 
     const rootFolders = data.filter(item => item.parentId === null);
     const currentChildren = data.filter(item => item.parentId === currentFolder);
@@ -144,10 +147,7 @@ class App extends Component {
           />
         </div>
         <div className="main-content">
-          {window.innerWidth < 768 && (
-            <button className="sidebar-toggle" onClick={this.toggleSidebar}>☰</button>
-          )}
-          <h1>Корневые папки:</h1>
+
           <div className="root-buttons">
             {rootFolders.map(node => (
               <button
@@ -160,19 +160,24 @@ class App extends Component {
             ))}
           </div>
 
-          <button
-            className="back-button"
-            onClick={this.handleBackClick}
-            disabled={isAtRoot}
-          >
-            Назад
-          </button>
+          {/* Условие для отображения кнопки "Назад" */}
+          {!isAtRoot && (
+            <button
+              className="back-button"
+              onClick={this.handleBackClick}
+            >
+              Назад
+            </button>
+          )}
 
-          {currentFolder && currentChildren.length > 0 && (
+          {currentFolder && currentChildren.length > 0 ? (
             <ul>
               {this.renderTree(currentChildren)}
             </ul>
-          )}
+          ) : currentFolder ? (
+            //TODO: сделать оформление
+            <div className="emptyFolder">Тут пока что пусто</div> // Message for empty folder
+          ) : null}
         </div>
       </div>
     );
