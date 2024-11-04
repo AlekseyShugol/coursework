@@ -127,12 +127,12 @@ class App extends Component {
     const { data, loading, error, currentFolder, path, isSidebarOpen } = this.state;
 
     if (loading) return <div>Загрузка...</div>;
-    if (error){
-      console.log(error);
-       return <div>Извините, произошла ошибка</div>
-    };
+    if (error) {
+      return <div>{error}</div>;
+    }
 
-    const rootFolders = data.filter(item => item.parentId === null);
+    const rootFolders = data.filter(item => item.parentId === null)
+      .sort((a, b) => a.element_position - b.element_position);
     const currentChildren = data.filter(item => item.parentId === currentFolder);
     const isAtRoot = rootFolders.some(folder => folder.id === currentFolder);
 
@@ -147,7 +147,6 @@ class App extends Component {
           />
         </div>
         <div className="main-content">
-
           <div className="root-buttons">
             {rootFolders.map(node => (
               <button
@@ -175,7 +174,6 @@ class App extends Component {
               {this.renderTree(currentChildren)}
             </ul>
           ) : currentFolder ? (
-            //TODO: сделать оформление
             <div className="emptyFolder">Тут пока что пусто</div> // Message for empty folder
           ) : null}
         </div>
