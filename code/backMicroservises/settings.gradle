@@ -1,2 +1,4 @@
 rootProject.name = 'backMicroservises'
 include("back")
+include 'authorization'
+
