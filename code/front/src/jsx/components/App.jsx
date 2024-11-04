@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { fetchData, deleteNode } from '../api/Api'; // Импортируем функции из файла api
-import Folder from './Folder'; // Импортируем компонент Folder
-import File from './File'; // Импортируем компонент File
-import '../../css/App.css'; // Импортируем стили
+import { fetchData, deleteNode } from '../../js/api/Api';
+import Folder from './Folder';
+import File from './File';
+import SideTree from './SideTree';
+import '../../css/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -13,36 +14,60 @@ class App extends Component {
       error: null,
       currentFolder: null,
       path: [],
+      isSidebarOpen: false,
     };
   }
 
   async componentDidMount() {
     try {
-      const result = await fetchData(); // Получаем данные при монтировании компонента
-      this.setState({ data: result, loading: false });
+      const result = await fetchData();
+      if (result && Array.isArray(result)) {
+        this.setState({ data: result, loading: false });
 
-      const firstRootFolder = result.find(item => item.parentId === null);
-      if (firstRootFolder) {
-        this.setState({
-          currentFolder: firstRootFolder.id,
-          path: [firstRootFolder.id],
-        });
+        const rootFolders = result.filter(item => item.parentId === null);
+        if (rootFolders.length > 0) {
+          this.setState({
+            currentFolder: rootFolders[0].id,
+            path: [rootFolders[0].id],
+          });
+        }
       }
+
+      document.addEventListener('keydown', this.handleKeyDown);
+      document.addEventListener('click', this.handleOutsideClick);
     } catch (error) {
-      this.setState({ error: "Ошибка при получении данных: " + error.message, loading: false });
+      this.setState({ error: `Ошибка при получении данных: ${error.message}`, loading: false });
     }
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('click', this.handleOutsideClick);
+  }
+
+  handleKeyDown = (event) => {
+    if (event.key === 'Escape') {
+      this.setState({ isSidebarOpen: false });
+    }
+  };
+
+  handleOutsideClick = (event) => {
+    const sidebar = document.querySelector('.sidebar');
+    if (this.state.isSidebarOpen && sidebar && !sidebar.contains(event.target)) {
+      this.setState({ isSidebarOpen: false });
+    }
+  };
+
   handleDelete = async (id) => {
     try {
-      await deleteNode(id); // Удаляем узел
+      await deleteNode(id);
       this.setState(prevState => ({
         data: prevState.data.filter(item => item.id !== id),
         currentFolder: prevState.currentFolder === id ? null : prevState.currentFolder,
         path: prevState.path.filter(p => p !== id),
       }));
     } catch (error) {
-      this.setState({ error: "Ошибка при удалении данных: " + error.message });
+      this.setState({ error: `Ошибка при удалении данных: ${error.message}` });
     }
   };
 
@@ -65,8 +90,16 @@ class App extends Component {
     });
   };
 
+  toggleSidebar = () => {
+    this.setState(prevState => ({
+      isSidebarOpen: !prevState.isSidebarOpen,
+    }));
+  };
+
   renderTree = (nodes) => {
-    return nodes.map(node => {
+    const sortedNodes = nodes.sort((a, b) => a.element_position - b.element_position);
+
+    return sortedNodes.map(node => {
       const children = this.state.data.filter(item => item.parentId === node.id);
       return (
         <React.Fragment key={node.id}>
@@ -77,7 +110,7 @@ class App extends Component {
               onClick={() => this.handleFolderClick(node.id)}
               onDelete={() => this.handleDelete(node.id)}
             >
-              {children.length > 0 && this.renderTree(children)} {/* Рендерим дочерние узлы внутри Folder */}
+              {children.length > 0 && this.renderTree(children)}
             </Folder>
           ) : (
             <File
@@ -91,40 +124,59 @@ class App extends Component {
   };
 
   render() {
-    const { data, loading, error, currentFolder, path } = this.state;
+    const { data, loading, error, currentFolder, path, isSidebarOpen } = this.state;
 
     if (loading) return <div>Загрузка...</div>;
-    if (error) return <div>{error}</div>;
+    if (error) {
+      return <div>{error}</div>;
+    }
 
-    const topLevelNodes = data.filter(item => item.parentId === null);
+    const rootFolders = data.filter(item => item.parentId === null)
+      .sort((a, b) => a.element_position - b.element_position);
     const currentChildren = data.filter(item => item.parentId === currentFolder);
+    const isAtRoot = rootFolders.some(folder => folder.id === currentFolder);
 
     return (
       <div className="container">
-        <h1>Корневые папки:</h1>
-        <div className="root-buttons">
-          {topLevelNodes.map(node => (
-            <button
-              key={node.id}
-              className={`root-button ${currentFolder === node.id ? 'active' : ''}`}
-              onClick={() => this.handleFolderClick(node.id)}
-            >
-              {node.name}
-            </button>
-          ))}
+        <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+          <SideTree
+            data={data}
+            currentFolder={currentFolder}
+            onFolderClick={this.handleFolderClick}
+            onDelete={this.handleDelete}
+          />
         </div>
+        <div className="main-content">
+          <div className="root-buttons">
+            {rootFolders.map(node => (
+              <button
+                key={node.id}
+                className={`root-button ${currentFolder === node.id ? 'active' : ''}`}
+                onClick={() => this.handleFolderClick(node.id)}
+              >
+                {node.name}
+              </button>
+            ))}
+          </div>
 
-        {path.length > 0 && (
-          <button onClick={this.handleBackClick} className="back-button">
-            Вернуться назад
-          </button>
-        )}
+          {/* Условие для отображения кнопки "Назад" */}
+          {!isAtRoot && (
+            <button
+              className="back-button"
+              onClick={this.handleBackClick}
+            >
+              Назад
+            </button>
+          )}
 
-        {currentFolder && (
-          <ul>
-            {this.renderTree(currentChildren)} {/* Здесь рендерятся дочерние узлы */}
-          </ul>
-        )}
+          {currentFolder && currentChildren.length > 0 ? (
+            <ul>
+              {this.renderTree(currentChildren)}
+            </ul>
+          ) : currentFolder ? (
+            <div className="emptyFolder">Тут пока что пусто</div> // Message for empty folder
+          ) : null}
+        </div>
       </div>
     );
   }
