@@ -44,6 +44,7 @@ INSERT INTO nodes (name, type, parent_id, url, description,element_position) VAL
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('6 класс', 'FOLDER',40, NULL, NULL ,2);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Учебники', 'FOLDER',44, NULL, NULL ,1);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Отдельные темы', 'FOLDER',44, NULL, NULL ,2);
+           -- INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('file.xls', 'FILE',46, '/resources/files/1.xls', NULL ,1);
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('7 класс', 'FOLDER',40, NULL, NULL ,3);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Учебники', 'FOLDER',47, NULL, NULL ,1);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Отдельные темы', 'FOLDER',47, NULL, NULL ,2);
