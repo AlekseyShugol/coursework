@@ -46,6 +46,27 @@
     text-decoration: underline;
 }
 
+.file-name {
+    font-size: 1.5em; /* Крупный шрифт для названия */
+    text-align: center; /* Центрируем текст */
+    margin: 0; /* Убираем отступы */
+}
+.download-button {
+    align-self: flex-end; /* Выравнивание кнопки справа */
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+.download-button:hover{
+    background-color: #0056b3;
+}
+
 /* Отзывчивость */
 @media (max-width: 600px) {
     .file-item {
