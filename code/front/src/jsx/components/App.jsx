@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { fetchData, deleteNode } from '../../js/api/Api';
 import Folder from './Folder';
-import File from './File';
+import File from './FileComponents/File';
 import SideTree from './SideTree';
 import '../../css/App.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Folder from './Folder';
-import File from './File';
+import File from './FileComponents/File';
 import '../../css/SideTree.css'; // Импортируем стили
 
 const SideTree = ({ data, currentFolder, onFolderClick, onDelete }) => {

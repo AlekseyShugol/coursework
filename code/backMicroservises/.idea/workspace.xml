@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f4b36ec-d78a-487e-8fc3-78b617033ffc" name="Changes" comment="fix back">
-      <change afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/passwordUtil/PasswordUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/real.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/real.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/css/File.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/css/File.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/js/functions/getFileName.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/js/functions/getFileName.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/File.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/FileContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/ImageContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/VideoContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/File.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/MainFrame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/MainFrame.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/SideTree.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/SideTree.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,22 +91,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.back [build].executor": "Run",
-    "Gradle.back [clean].executor": "Run",
-    "Gradle.backMicroservises:authorization [:authorization:org.example.Main.main()].executor": "Run",
-    "Gradle.backMicroservises:authorization [build].executor": "Run",
-    "Gradle.backMicroservises:authorization [clean].executor": "Run",
-    "Gradle.backSpring [:org.example.Main.main()].executor": "Run",
-    "Gradle.backSpring [bootRun].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "microservices",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/repositories/coursework/code/backSpring/src",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.back [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.back [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backMicroservises:authorization [:authorization:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backMicroservises:authorization [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backMicroservises:authorization [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backSpring [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backSpring [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;microservices&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/repositories/coursework/code/backSpring/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\repositories\coursework\code\backSpring\src" />
