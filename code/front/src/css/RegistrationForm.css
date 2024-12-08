@@ -1,0 +1,46 @@
+/* RegistrationForm.css */
+
+.registration-form {
+    background-color: #ffffff; /* Белый фон */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px; /* Отступы */
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрирование формы */
+}
+
+.registration-form h2 {
+    text-align: center; /* Заголовок по центру */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.registration-form label {
+    display: block; /* Блоковое отображение для меток */
+    margin: 10px 0 5px; /* Отступы для меток */
+}
+
+.registration-form input {
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Отступ внутри поля */
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 5px; /* Закругленные углы полей */
+    margin-bottom: 15px; /* Отступ снизу */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.registration-form button {
+    width: 100%; /* Кнопки занимают всю ширину */
+    padding: 10px; /* Отступы внутри кнопок */
+    background-color: #007bff; /* Цвет кнопок */
+    color: white; /* Цвет текста кнопок */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы кнопок */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    margin-bottom: 10px; /* Отступ снизу для увеличения расстояния между кнопками */
+}
+
+.registration-form button:hover {
+    background-color: #0056b3; /* Темный цвет при наведении */
+}

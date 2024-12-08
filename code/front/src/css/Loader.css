@@ -1,0 +1,72 @@
+/* src/Loader.css */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Заполняет всю высоту экрана */
+    text-align: center;
+}
+
+.loader {
+    border: 12px solid rgba(255, 255, 255, 0.3);
+    /* Увеличенный размер */
+    border-top: 12px solid #3498db;
+    /* Цвет верхней части */
+    border-radius: 50%;
+    width: 120px;
+    /* Увеличенный размер */
+    height: 120px;
+    /* Увеличенный размер */
+    animation: spin 1s linear infinite;
+    /* Бесконечная анимация вращения */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    font-size: 24px;
+    /* Размер шрифта */
+    margin-top: 20px;
+}
+
+.dots {
+    animation: dots 1s steps(5) infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '';
+    }
+
+    20%,
+    40% {
+        content: '.';
+    }
+
+    40%,
+    60% {
+        content: '..';
+    }
+
+    60%,
+    80% {
+        content: '...';
+    }
+
+    80%,
+    100% {
+        content: '';
+    }
+}

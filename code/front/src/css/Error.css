@@ -1,0 +1,35 @@
+/* src/Cross.css */
+.cross {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex; /* Используем flex для центрирования */
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: red; /* Цвет линий изменен на красный */
+    transform-origin: center;
+    transform: scaleY(0); /* Начальное состояние: линия не видима */
+    animation: grow 0.5s ease forwards infinite; /* Зацикленная анимация */
+}
+
+.line1 {
+    transform: rotate(45deg);
+    animation-delay: 0s; /* Первая линия появляется без задержки */
+}
+
+.line2 {
+    transform: rotate(-45deg);
+    animation-delay: 0.3s; /* Вторая линия появляется с задержкой */
+}
+
+/*@keyframes grow {*/
+/*    0% { transform: scaleY(0); }*/
+/*    50% { transform: scaleY(1); }*/
+/*    100% { transform: scaleY(0); }*/
+/*}*/

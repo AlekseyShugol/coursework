@@ -1,51 +1,78 @@
 .container {
   display: flex;
-  flex-direction: row-reverse;
-  /* Изменено на row-reverse для размещения сайтбара справа */
+  flex-direction: row; /* Элементы располагаются в строку */
   justify-content: space-between;
+  min-height: 100vh; /* Контейнер занимает всю высоту экрана */
   padding: 20px;
-  background-color: #f8f9fa;
-  /* Фоновый цвет для контейнера */
-  border-radius: 8px;
-  /* Скругление углов */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Тень для контейнера */
-}
-
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #ffffff;
-  /* Фоновый цвет для основного контента */
-  border-radius: 8px;
-  /* Скругление углов */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Тень для основного контента */
+  background-color: #f8f9fa; /* Фоновый цвет для контейнера */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+  position: relative; /* Для позиционирования футера */
 }
 
 .sidebar {
-  width: 180px;
-  /* Фиксированная ширина для сайтбара */
+  flex: 0 0 10%;
+  background-color: #ffffff; /* Фоновый цвет для сайтбара */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для сайтбара */
+}
+
+.main-content {
+  flex: 1; /* Основной контент занимает оставшееся пространство */
   padding: 20px;
-  background-color: #e9ecef;
-  /* Фоновый цвет для сайтбара */
-  border-radius: 8px;
-  /* Скругление углов */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Тень для сайтбара */
+  background-color: #ffffff; /* Фоновый цвет для основного контента */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для основного контента */
+  margin-bottom: 60px; /* Отступ для футера */
+}
+
+/* Футер */
+.footer {
+  display: flex; /* Используем flexbox для размещения элементов */
+  flex-direction: column; /* Элементы располагаются вертикально */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  background-color: #ffffff; /* Цвет фона футера */
+  padding: 10px; /* Отступы */
+  position: absolute; /* Фиксируем футер внизу контейнера */
+  bottom: 0; /* Привязываем футер к нижней части контейнера */
+  left: 0; /* Привязываем футер к левому краю */
+  width: 100%; /* Ширина на всю ширину контейнера */
+}
+
+.footer .enterButton {
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  color: #007bff; /* Цвет текста */
+  cursor: pointer; /* Курсор при наведении */
+  text-align: left; /* Выравнивание текста слева */
+  padding: 0; /* Убираем отступы */
+  font: inherit; /* Наследуем шрифт от родителя */
+  text-decoration: none; /* Убираем подчеркивание */
+  margin-bottom: 10px; /* Отступ снизу от кнопки */
+}
+
+.footer .enterButton:hover {
+  color: #0056b3; /* Цвет текста при наведении */
+  text-decoration: underline; /* Подчеркивание текста при наведении */
+}
+
+.footer-content {
+  text-align: center; /* Центрируем текст */
 }
 
 /* Медиазапрос для мобильных версий */
 @media (max-width: 1000px) {
   .container {
-    flex-direction: column;
-    /* Размещаем элементы вертикально на мобильных устройствах */
+    flex-direction: column; /* Размещаем элементы вертикально на мобильных устройствах */
     padding: 5px;
   }
 
   .sidebar {
-    display: none;
-    /* Скрываем сайтбар для мобильных устройств */
+    display: none; /* Скрываем сайтбар для мобильных устройств */
+  }
+
+  .main-content {
+    margin-bottom: 20px; /* Уменьшаем отступ для футера на мобильных устройствах */
   }
 }
 
@@ -59,31 +86,22 @@
 }
 
 .root-button {
-  background-color: #007bff;
-  /* Цвет фона кнопки */
+  background-color: #007bff; /* Цвет фона кнопки */
   border: none;
-  color: #ffffff;
-  /* Цвет текста кнопки */
-  text-decoration: none;
+  color: #ffffff; /* Цвет текста кнопки */
   cursor: pointer;
   font-size: 16px;
-  padding: 10px 15px;
-  /* Отступы внутри кнопки */
-  border-radius: 5px;
-  /* Скругление углов кнопки */
-  transition: background-color 0.3s;
-  /* Плавный переход цвета фона */
+  padding: 10px 15px; /* Отступы внутри кнопки */
+  border-radius: 5px; /* Скругление углов кнопки */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
 }
 
 .root-button.active {
-  background-color: #0056b3;
-  /* Более темный цвет для активной кнопки */
-  text-decoration: underline;
+  background-color: #0056b3; /* Более темный цвет для активной кнопки */
 }
 
 .root-button:hover {
-  background-color: #0056b3;
-  /* Цвет фона при наведении */
+  background-color: #0056b3; /* Цвет фона при наведении */
 }
 
 .back-button {
