@@ -1,0 +1,43 @@
+.context-menu {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Увеличены закругления */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Более заметная тень */
+    padding: 30px; /* Увеличен отступ */
+    width: 300px; /* Увеличена ширина */
+    position: fixed; /* Используем fixed для центрирования */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем меню */
+    z-index: 1000;
+}
+
+.context-menu h2 {
+    margin: 0 0 15px; /* Увеличен отступ снизу */
+    font-size: 28px; /* Увеличен размер заголовка */
+    color: #333;
+    text-align: center; /* Центрируем текст заголовка */
+}
+
+.context-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.context-menu li {
+    padding: 15px; /* Увеличен отступ для элементов списка */
+    font-size: 18px; /* Увеличен размер шрифта */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Добавлен эффект увеличения */
+    border-radius: 5px; /* Закругленные углы для элементов списка */
+}
+
+.context-menu li:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.context-menu li:active {
+    background-color: #d0d0d0;
+}

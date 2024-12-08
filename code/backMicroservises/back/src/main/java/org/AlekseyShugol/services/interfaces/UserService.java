@@ -11,6 +11,8 @@ public interface UserService {
 
     UserResponse getUserById(Long id);
 
+    UserResponse getUserByLogin(String login);
+
     List<UserResponse> getAllUsers();
 
     UserResponse addUser(UserRequest userRequest);
