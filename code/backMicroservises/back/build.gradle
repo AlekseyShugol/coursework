@@ -68,6 +68,7 @@ dependencies {
         implementation "com.hubspot.jackson:jackson-datatype-protobuf:0.9.13"
         implementation "org.slf4j:slf4j-api:$slf4j"
         implementation "org.springframework.kafka:spring-kafka"
+        implementation 'org.mindrot:jbcrypt:0.4'
     }
 
 
