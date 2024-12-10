@@ -29,6 +29,11 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @GetMapping("/logins/{login}")
+    public UserResponse getUserByLogin(@PathVariable String login) {
+        return userService.getUserByLogin(login);
+    }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<UserResponse> getAllUsers(){
@@ -48,7 +53,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public UserResponse updateUser(@PathVariable Long id, @RequestBody @Valid UserRequest request){
         return  userService.updateUser(id, request);
     }

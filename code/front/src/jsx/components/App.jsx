@@ -28,11 +28,11 @@ class App extends Component {
             if (result && Array.isArray(result)) {
                 this.setState({ data: result, loading: false });
 
-                const rootFolders = result.filter(item => item.parentId === null);
-                if (rootFolders.length > 0) {
+                const mainFolder = result.find(item => item.name === 'Главная');
+                if (mainFolder) {
                     this.setState({
-                        currentFolder: rootFolders[0].id,
-                        path: [rootFolders[0].id],
+                        currentFolder: mainFolder.id,
+                        path: [mainFolder.id],
                     });
                 }
             }
@@ -63,10 +63,13 @@ class App extends Component {
     };
 
     handleFolderClick = (id) => {
-        this.setState(prevState => ({
-            currentFolder: id,
-            path: [...prevState.path, id],
-        }));
+        this.setState({ currentFolder: id });
+        this.updatePath(id);
+    };
+
+    updatePath = (id) => {
+        const newPath = [...this.state.path, id];
+        this.setState({ path: newPath });
     };
 
     handleBackClick = () => {
@@ -86,6 +89,11 @@ class App extends Component {
     };
 
     closeRegistrationForm = () => {
+        this.setState({ showRegistration: false });
+    };
+
+    handleLogout = () => {
+        console.log("Вы вышли из системы");
         this.setState({ showRegistration: false });
     };
 
@@ -123,13 +131,12 @@ class App extends Component {
 
         if (error) {
             return <div>
-                <ErrorComponent text={`${error}`} />
+                <ErrorComponent text={error} />
             </div>;
         }
 
-        // If registration form is shown, render it instead of the main app content
         if (showRegistration) {
-            return <RegistrationForm onClose={this.closeRegistrationForm} />;
+            return <RegistrationForm onClose={this.closeRegistrationForm} onLogout={this.handleLogout} />;
         }
 
         const rootFolders = data.filter(item => item.parentId === null)

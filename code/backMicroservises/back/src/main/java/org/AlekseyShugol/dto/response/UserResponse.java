@@ -6,7 +6,7 @@ public record UserResponse(
 
         String login,
 
-        String password,
+        //String password,
 
         String role
 

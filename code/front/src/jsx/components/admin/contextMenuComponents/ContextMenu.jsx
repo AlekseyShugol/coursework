@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
+import '../../../../css/ContextMenu.css'
 
 class ContextMenu extends Component {
-    handleMenuClick = (section) => {
-        alert(`Вы выбрали: ${section}`); // Здесь можно заменить на логику для работы с выбранным разделом
-    };
-
     render() {
         return (
             <div className="context-menu">
-                <h2>Личный кабинет</h2>
                 <ul>
-                    <li onClick={() => this.handleMenuClick('Добавить раздел')}>Добавить раздел</li>
-                    <li onClick={() => this.handleMenuClick('Заполнить раздел')}>Заполнить раздел</li>
+                    <li onClick={() => this.props.onSelect('profile')}>Личный кабинет</li>
+                    <li onClick={() => this.props.onSelect('add')}>Изменить раздел</li>
+                    <li onClick={() => this.props.onSelect('fill')}>Заполнить раздел</li>
+                    <li onClick={this.props.onLogout}>Выйти</li> {/* Кнопка "Выйти" */}
                 </ul>
             </div>
         );

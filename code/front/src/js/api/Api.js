@@ -1,7 +1,7 @@
 import axios from 'axios';
-//const url = 'http://192.168.0.107:8080/api/v1/nodes';
-const url = 'http://localhost:8080/api/v1/nodes';
-//const url = 'http://192.168.18.41:8080/api/v1/nodes';
+import {IP} from "./addres";
+const url = `http://${IP}:8080/api/v1/nodes`;
+
 
 export const fetchData = async () => {
   const response = await axios.get(url);

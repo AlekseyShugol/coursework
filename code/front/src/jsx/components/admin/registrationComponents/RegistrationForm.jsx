@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ContextMenu from '../contextMenuComponents/ContextMenu'; // Импорт нового компонента
+import ContextMenu from '../contextMenuComponents/ContextMenu';
+import AddSection from "../contextMenuComponents/sections/AddSection";
+import FillSection from "../contextMenuComponents/sections/FillSection";
+import ProfileSection from "../contextMenuComponents/sections/ProfileSection";
 import "../../../../css/RegistrationForm.css";
+import { IP } from "../../../../js/api/addres";
 
 class RegistrationForm extends Component {
     constructor(props) {
@@ -10,7 +14,8 @@ class RegistrationForm extends Component {
             name: '',
             password: '',
             message: '',
-            isLoggedIn: false, // Новое состояние для отслеживания входа
+            activeSection: null,
+            userLogin: '',
         };
     }
 
@@ -31,7 +36,8 @@ class RegistrationForm extends Component {
             if (response.data.response) {
                 this.setState({
                     message: 'Регистрация прошла успешно!',
-                    isLoggedIn: true // Устанавливаем состояние входа
+                    activeSection: 'context', // Переход к контекстному меню
+                    userLogin: name, // Сохраните логин пользователя
                 });
             } else {
                 this.setState({ message: response.data.error || 'Ошибка регистрации!' });
@@ -43,11 +49,41 @@ class RegistrationForm extends Component {
         this.setState({ name: '', password: '' });
     };
 
-    render() {
-        const { name, password, message, isLoggedIn } = this.state;
+    handleSelectSection = (section) => {
+        this.setState({ activeSection: section });
+    };
 
-        if (isLoggedIn) {
-            return <ContextMenu />; // Рендерим контекстное меню
+    handleBack = () => {
+        this.setState({ activeSection: 'context' });
+    };
+
+    handleLogout = () => {
+        this.props.onLogout();
+        this.setState({ activeSection: null }); // Сброс активного раздела
+    };
+
+    render() {
+        const { name, password, message, activeSection, userLogin } = this.state;
+
+        if (activeSection === 'profile') {
+            return <ProfileSection userLogin={userLogin} onBack={this.handleBack} />;
+        }
+
+        if (activeSection === 'add') {
+            return <AddSection onBack={this.handleBack} />;
+        }
+
+        if (activeSection === 'fill') {
+            return <FillSection onBack={this.handleBack} />;
+        }
+
+        if (activeSection === 'context') {
+            return (
+                <ContextMenu
+                    onSelect={this.handleSelectSection}
+                    onLogout={this.handleLogout}
+                />
+            );
         }
 
         return (
@@ -76,6 +112,9 @@ class RegistrationForm extends Component {
                     </div>
                     <button type="submit">Войти</button>
                 </form>
+                <button className="logout-button" onClick={this.handleLogout}>
+                    Выйти
+                </button>
                 {message && <p>{message}</p>}
             </div>
         );

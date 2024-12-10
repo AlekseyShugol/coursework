@@ -38,6 +38,12 @@ public class DefaultUserService implements UserService {
     }
 
     @Override
+    public UserResponse getUserByLogin(String login) {
+        var userEntity = repository.findUserByLogin(login).orElseThrow(()->new UserNotFoundException("There is no element with this id: "+login));
+        return mapper.EntityToResponse(userEntity);
+    }
+
+    @Override
     public List<UserResponse> getAllUsers() {
         return repository.findAll()
                 .stream()
@@ -56,6 +62,8 @@ public class DefaultUserService implements UserService {
 
     @Override
     public UserResponse updateUser(Long id, UserRequest userRequest) {
+        String hashed = PasswordUtil.hashPassword(userRequest.getPassword());
+        userRequest.setPassword(hashed);
         var existingUser = repository.findById(id).orElseThrow(()->new UserNotFoundException("There is no users with id: " + id));
         mapper.updateUserFromRequest(userRequest,existingUser);
         var updatedUser = repository.save(existingUser);
