@@ -5,55 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f4b36ec-d78a-487e-8fc3-78b617033ffc" name="Changes" comment="fix back">
-      <change afterPath="$PROJECT_DIR$/authorization/src/main/java/org/AlekseyShugol/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dao/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/UserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/response/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/response/UserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/exeptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/mappers/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/passwordUtil/PasswordUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/DefaultUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/interfaces/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/public/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/public/resources/files/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/Error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/Loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/RegistrationForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/adminComponents/AdminComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/MenuComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/registrationComponents/RegistrationForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/connectionComponents/errorComponent/CrossComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/connectionComponents/errorComponent/ErrorComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/connectionComponents/loaderComponent/LoaderComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/File.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/passwordUtil/PasswordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/AlekseyShugol/passwordUtil/PasswordUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/back/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/controller/NodesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/controller/NodesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/dao/NodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dao/NodeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/dto/request/NodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/NodeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/dto/response/NodeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/response/NodeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/entity/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/entity/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/exeptions/NodeNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/exeptions/NodeNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/mappers/NodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/mappers/NodeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/services/DefaultNodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/DefaultNodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/example/services/interfaces/NodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/interfaces/NodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/js/api/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/js/api/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/File.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/FileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/FileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/ImageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/ImageContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/FileComponents/VideoContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/VideoContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/Folder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/folderComponents/Folder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/MainFrame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/mainComponents/MainFrame.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/SideTree.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/treeComponents/SideTree.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +100,9 @@
     &quot;Gradle.backSpring [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.backSpring [bootRun].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;microservices&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/repositories/coursework/code/backMicroservises/back/src/main/java/org/AlekseyShugol&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
