@@ -18,7 +18,7 @@ public class NodeRequest {
     private String type;
 
     @Positive(message = "The parent ID must be a positive number")
-    private Long parent_id;
+    private Long parentId;
 
     @Schema(description = "url to file or internet video")
     private String url;

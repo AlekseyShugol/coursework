@@ -131,7 +131,7 @@ class App extends Component {
 
         if (error) {
             return <div>
-                <ErrorComponent text={`${error}`} />
+                <ErrorComponent text={error} />
             </div>;
         }
 

@@ -1,5 +1,5 @@
 INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Главная', 'FOLDER', NULL, NULL, 'desc1',1); --главная
-INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('файл1', 'FILE',1, '/resources/images/profile.jpg', 'desc2',1);
+INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('файл1', 'FILE',1, '/resources/images/profile.jpg', NULL,1);
 INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('ПОДГОТОВКА К ЦТ/ЦЭ', 'FOLDER',NULL, NULL, NULL, 2);
 INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Книги для подготовки к ЦТ', 'FOLDER',3, NULL, NULL ,1);
 INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Темы', 'FOLDER',3, NULL, NULL ,2);
@@ -44,7 +44,8 @@ INSERT INTO nodes (name, type, parent_id, url, description,element_position) VAL
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('6 класс', 'FOLDER',40, NULL, NULL ,2);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Учебники', 'FOLDER',44, NULL, NULL ,1);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Отдельные темы', 'FOLDER',44, NULL, NULL ,2);
-           -- INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('file.xls', 'FILE',46, '/resources/files/1.xls', 'sss' ,2);
+           INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('file3.xlsx', 'FILE',46, '/resources/files/1.xlsx', 'sss121' ,3);
+           INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('file.txt', 'FILE',46, '/resources/files/1.txt', 'sss121' ,4);
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('7 класс', 'FOLDER',40, NULL, NULL ,3);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Учебники', 'FOLDER',47, NULL, NULL ,1);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Отдельные темы', 'FOLDER',47, NULL, NULL ,2);
@@ -60,7 +61,6 @@ INSERT INTO nodes (name, type, parent_id, url, description,element_position) VAL
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('11 класс', 'FOLDER',40, NULL, NULL ,7);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Учебники', 'FOLDER',59, NULL, NULL ,1);
             INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Отдельные темы', 'FOLDER',59, NULL, NULL ,2);
-INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Обо мне', 'FOLDER',NULL, NULL, NULL ,6);
 INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('ЭОР', 'FOLDER',NULL, NULL, NULL ,5);
     INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Канал "Геометрия Валерий Казаков"', 'FOLDER',63, NULL, NULL ,1);
         INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('GDZ VIDEO', 'LINK',64, 'https://www.youtube.com/@gdzvideo5339', 'YouTube канал' ,1);
@@ -68,6 +68,7 @@ INSERT INTO nodes (name, type, parent_id, url, description,element_position) VAL
         INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('GDZ VIDEO', 'LINK',64, 'https://www.youtube.com/embed/uTvT7-Hui44?si=LLhcm-_to0G-M2sC', '№ 101-200 - Геометрия 8 класс Казаков' ,3);
         INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Посмотреть весь плейлист', 'LINK',64, 'https://www.youtube.com/playlist?list=PLtgE87VTmyY-whbZVMWags2too_uidDet', NULL ,6);
         INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Посмотреть весь плейлист', 'LINK',64, 'https://www.youtube.com/embed/N0VqRdxF3C0?si=IWc52IokyDKxQzc5', 'ВПИСАННЫЙ КВАДРАТ. Удача с нами!' ,6);
+        INSERT INTO nodes (name, type, parent_id, url, description,element_position) VALUES ('Обо мне', 'FOLDER',NULL, NULL, NULL ,6);
 
 
 

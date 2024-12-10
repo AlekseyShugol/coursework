@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f4b36ec-d78a-487e-8fc3-78b617033ffc" name="Changes" comment="fix back">
-      <change afterPath="$PROJECT_DIR$/../front/src/css/AddSection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/ContextMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/FillSection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/css/ProfileSection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/js/api/addres.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/useFileUpload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/DefaultUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/DefaultUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/services/interfaces/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/css/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/css/RegistrationForm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/js/api/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/js/api/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/NodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/NodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/init_folders.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/init_folders.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/real.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/real.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/js/api/addres.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/js/api/addres.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/ContextMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/ContextMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/AddSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/AddSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/ProfileSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/ProfileSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/registrationComponents/RegistrationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/registrationComponents/RegistrationForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/FillSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/FillSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/File.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
