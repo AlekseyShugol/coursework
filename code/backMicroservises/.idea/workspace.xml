@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f4b36ec-d78a-487e-8fc3-78b617033ffc" name="Changes" comment="fix back">
-      <change afterPath="$PROJECT_DIR$/../front/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/useFileUpload.js" afterDir="false" />
+    <list default="true" id="2f4b36ec-d78a-487e-8fc3-78b617033ffc" name="Changes" comment="add front">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/NodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/org/AlekseyShugol/dto/request/NodeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/init_folders.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/init_folders.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/real.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/real.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/js/api/addres.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/js/api/addres.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/FillSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/admin/contextMenuComponents/sections/FillSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/jsx/components/user/fileComponents/File.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../doc/курсовая.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../doc/курсовая.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +73,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="back" />
+        <entry key="$PROJECT_DIR$/../.." value="microservices" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -110,7 +100,7 @@
     &quot;Gradle.backSpring [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.backSpring [bootRun].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;microservices&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;final&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/repositories/coursework/code/backMicroservises/back/src/main/java/org/AlekseyShugol&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -269,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729590270800</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add front">
+      <option name="closed" value="true" />
+      <created>1733840698950</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733840698950</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +295,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix back" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix back" />
+    <MESSAGE value="add front" />
+    <option name="LAST_COMMIT_MESSAGE" value="add front" />
   </component>
 </project>

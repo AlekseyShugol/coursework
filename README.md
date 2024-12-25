@@ -1,3 +1,2 @@
 # coursework
-3rd year.
-web development work
+Шкголь Алексей 22ПИ_ПОКС1д
